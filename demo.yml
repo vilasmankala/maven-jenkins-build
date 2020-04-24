@@ -18,7 +18,7 @@ metadata:
     stack: frontend
     app: spinnaker
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       source: demo
@@ -58,5 +58,5 @@ spec:
   ports:
   - protocol: TCP
     port: 80
-    nodePort: 32413
+    nodePort: 32411
     targetPort: 8000
