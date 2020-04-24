@@ -40,10 +40,10 @@ metadata:
 spec:
   selector:
     source: maven
-    app: tomacat
+    app: tomcat
   type: NodePort
   ports:
   - protocol: TCP
-    port: 90
+    port: 8080
     nodePort: 32451
     targetPort: 8080
