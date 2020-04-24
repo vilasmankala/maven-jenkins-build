@@ -8,7 +8,7 @@ metadata:
     stack: frontend
     app: tomcat
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       source: maven
@@ -45,5 +45,5 @@ spec:
   ports:
   - protocol: TCP
     port: 8080
-    nodePort: 32455
+    nodePort: 32453
     targetPort: 8080
