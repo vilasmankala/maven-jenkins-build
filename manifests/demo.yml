@@ -8,7 +8,7 @@ metadata:
     stack: frontend
     app: tomcat
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       source: maven
