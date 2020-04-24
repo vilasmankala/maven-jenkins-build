@@ -1,9 +1,4 @@
-FROM golang
-
-ADD . /go/src/spinnaker.io/demo/k8s-demo
-
-RUN go install spinnaker.io/demo/k8s-demo
-
-ADD ./content_new /content
-
-ENTRYPOINT /go/bin/k8s-demo
+From tomcat:8.0.51-jre8-alpine
+RUN rm -rf /usr/local/tomcat/webapps/*
+COPY ./target/mvn-hello-world.war /usr/local/tomcat/webapps/ROOT.war
+CMD ["catalina.sh","run"]
